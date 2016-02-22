@@ -1,0 +1,12 @@
+* Twitter crawler
+  This is a simple crawler that connects to a Twitter stream and sends the tweets to a running Rails app
+** How to use it
+   You must have an application registered on Twitter Apps, so you can have a consumer key, consumer secret, oauth token and oauth token secret.
+   Export those as environment variables (named CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN and OAUTH_TOKEN_SECRET)
+   The Rails app "SumOneProject" must also be running on http://localhost:3000/
+   After that, run
+   #+BEGIN_SRC shell
+   bundle install
+   bundle exec ruby crawler.rb <your term>
+   #+END_SRC
+   And the script will start collecting tweets containing your term, sending them to the SumOneProject app.
